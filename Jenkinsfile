@@ -18,7 +18,7 @@ pipeline {
         
         stage('Build Jar') {
             steps {
-                sh "mvn -f customer-service/pom.xml clean install"
+                sh "mvn clean install"
             }
         }
      
