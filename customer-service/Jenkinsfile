@@ -12,7 +12,7 @@
     stages {
         stage('checkout') {
             steps {
-                checkout scmGit(branches: [[name: '*/development']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/anilreddy7394/customer-microservice.git']])
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/anilreddy7394/customer-microservice.git']])
             }
         }
         
