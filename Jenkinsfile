@@ -21,15 +21,6 @@ pipeline {
                 sh "mvn -f customer-service/pom.xml clean install"
             }
         }
-     
-        stage('SonarQube Analysis') {
-            steps {
-               sh "mvn clean verify sonar:sonar \
-               -Dsonar.projectKey=jenkins-pipeline \
-               -Dsonar.host.url=http://52.86.114.38:9000 \
-               -Dsonar.login=sqp_7298ccece2bcd05561a94ac085c8eb645562d4b5"
-           }
-       }
         
         stage('Build image') {
             steps {
